@@ -37,3 +37,14 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# Personal Access Tokens (PATs)
+setup.R
+first-analysis.R
+
+# Removing all data
+
+*.xlsx
+*.csv
+data/
+
