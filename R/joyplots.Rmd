@@ -1,0 +1,28 @@
+---
+title: "JoyPlot of Tevin Campbell & Phil Collins"
+author: "Ryan Batten"
+date: "06/05/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(spotifyr)
+library(tidyverse) # data manipulation, cleaning, etc.
+library(ggridges) # use for making a joy plot
+```
+
+## Disney Tournament (using March Madness tournament bracket style)
+
+Aim of this project is to compare Disney hits we all know and love from our favorite albums (The Lion King, Hercules, Tarzan, 
+A Goofy Movie, and many more). 
+
+# JoyPlot of Phil Collins and Tevin Campbell 
+
+
+```{r joy plot of Tevin Campbell}
+
+```
+
+
