@@ -55,3 +55,28 @@ ggplot(joy_tc, aes(x = valence, y = album_name)) +
     axis.title.y = element_text(hjust = 0.5)
   )
 
+# Final Four Disney Albums: ----
+
+#... Tarzan ----
+
+tarzan <- spotifyr::get_album(id = '6fBzYwBKjuO4hmhcGuklJM?si=8G4ZAzUVRcm0FRF8aXphuw')
+
+str(tarzan)
+
+#... The Little Mermaid ----
+
+little_mermaid <- spotifyr::get_album(id = "4YTduhQWfS0pOzQC4o0HcG?si=LBpETiG2RSyZyIk8mloBQg" )
+
+str(little_mermaid)
+
+#... The Lion King ----
+
+lion_king <- spotifyr::get_album(id = "3YA5DdB3wSz4pdfEXoMyRd?si=9UUAysDuTS6ixCsXYMykWg")
+
+str(lion_king)
+
+#... Hercules ---
+
+hercules <- spotifyr::get_album(id = "1wbY6VUchNsZLaDi22eD3J?si=00ajCSlHReuJXSz8XpARZg")
+
+str(hercules)
