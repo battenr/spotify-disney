@@ -1,9 +1,11 @@
 ---
-title: "Disney Tournament Results: Winner"
+title: "Disney Final Four Results"
 output: github_document
 ---
 
 ```{r setup, include=FALSE}
+library(spotifyr)
+library(ggplot2)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 

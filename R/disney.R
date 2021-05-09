@@ -80,3 +80,26 @@ str(lion_king)
 hercules <- spotifyr::get_album(id = "1wbY6VUchNsZLaDi22eD3J?si=00ajCSlHReuJXSz8XpARZg")
 
 str(hercules)
+
+# By inspecting the lists, there is a field called "popularity". Based upon this:
+
+# Popularity of the 1999 Tarzan soundtrack, released 1999-01-01: integer of 1
+# Popularity of the 1997 The Little Mermaid soundtrack, released 1997-01-01: integer of 65
+# Popularity of the 1994 The Lion King soundtrack, released 1994-01-01: integer of 76
+# Popularity of the 1997 Hercules soundtrack, released 1997-01-01: integer of 67
+
+# The Big Finale ----
+
+# What does popularity mean? A score from 0 to 100 with 100 being to most popular
+
+big_finale <- dplyr::tribble(
+  ~album_name, ~popularity,
+  "Tarzan (1999)", 1,
+  "The Little Mermaid (1997)", 65,
+  "Hercules (1997)", 67,
+  "The Lion King (1994)", 76
+)
+
+
+
+
