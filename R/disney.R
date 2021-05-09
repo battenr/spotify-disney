@@ -1,6 +1,7 @@
 # Setup ----
 
 library(spotifyr)
+
 library(tidyverse) # data manipulation, cleaning, etc.
 library(ggridges) # use for making a joy plot
 
@@ -99,7 +100,3 @@ big_finale <- dplyr::tribble(
   "Hercules (1997)", 67,
   "The Lion King (1994)", 76
 )
-
-
-
-

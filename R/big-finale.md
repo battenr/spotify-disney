@@ -1,33 +1,81 @@
-Disney Final Four Results
+90’s Disney Hits
 ================
 
-## GitHub Documents
+# Disney Hits + Spotify: All Together
 
-This is an R Markdown format used for publishing markdown documents to
-GitHub. When you click the **Knit** button all R code chunks are run and
-a markdown file (.md) suitable for publishing to GitHub is generated.
+The aim of this project started as a NCAA March Madness style tournament
+bracket. What began as a simple selection process, turned into a more
+data-driven goal of “this is good but how do we look at this with a
+scientist’s eye?”. Data are everywhere, but sometimes it requires a bit
+more of “playing around” to understand what is really going on here.
 
-## Including Code
+## Step 1: Getting Setup with Spotify
 
-You can include R code in the document as follows:
+If you have no clue how to do this, don’t worry\! I didn’t either until
+I started playing around with it. First step is to head over to the
+amazing Thompson et al. (2021) *spotifyr* package to get setup with a
+Spotify developer account.
+
+## Step 2: Getting Familiar with the Data
+
+So now you’re in, what next? When you start exploring with the data it
+can seem overwhelming. Lists on lists on lists….but not to fear young
+Jedi\! Where there is a will there is a way. This is the exploratory
+data analysis phase, more of an art-form than a science however can’t
+recommend enough to check out “R for Data Science” by Grolemund &
+Wickham (2016). Like many before me, this is a great place to start as a
+beginner.
+
+We’ll pick the four albums we want to examine (using Disney Hits we all
+know and love\!): The Lion King, Hercules, Tarzan and The Little
+Mermaid.
+
+## Step 3: Alright, now you’re familiar what’s next?
+
+This part requires a little more googling (a key part of everyone’s
+process: from data scientists to top level execs) to understand what’s
+exactly going on here. Once you have a Spotify developer account, feel
+free to start poking around about what each component means: how the
+data is stored, how to access it, etc.
+
+## Step 4: Lets Get the Album ID
+
+If you have the Spotify app already downloaded onto your desktop (like I
+do), click on the album you’d like to use to pull the data from. See
+image below:
+
+![The Lion King](images/the-lion-king.png)
+
+## Step 5: Data Collection
+
+Time to get into it young grasshopper\! We’re going to use the
+*spotifyr::get\_album()* function to extract what we need here. It will
+pull a **BUNCH** of meta-data but fear not. If we keep this simple,
+we’ll be just fine. Below is an example using The Lion King (1994)
 
 ``` r
-summary(cars)
+lion_king <- spotifyr::get_album(id = "3YA5DdB3wSz4pdfEXoMyRd?si=9UUAysDuTS6ixCsXYMykWg")
 ```
 
-    ##      speed           dist       
-    ##  Min.   : 4.0   Min.   :  2.00  
-    ##  1st Qu.:12.0   1st Qu.: 26.00  
-    ##  Median :15.0   Median : 36.00  
-    ##  Mean   :15.4   Mean   : 42.98  
-    ##  3rd Qu.:19.0   3rd Qu.: 56.00  
-    ##  Max.   :25.0   Max.   :120.00
+As you can see, each album is associated with a unique identifier
+(typically a string that consists of a bunch of nonsensical letters\!).
+If they didn’t make sense to you, don’t worry they don’t to me either\!
 
-## Including Plots
+Here is a list of the other three albums:
 
-You can also embed plots, for example:
+``` r
+tarzan <- spotifyr::get_album(id = '6fBzYwBKjuO4hmhcGuklJM?si=8G4ZAzUVRcm0FRF8aXphuw') # Tarzan (1994)
+little_mermaid <- spotifyr::get_album(id = "4YTduhQWfS0pOzQC4o0HcG?si=LBpETiG2RSyZyIk8mloBQg" ) # The Little Mermaid (1997)
+hercules <- spotifyr::get_album(id = "1wbY6VUchNsZLaDi22eD3J?si=00ajCSlHReuJXSz8XpARZg") # Hercules (1997)
+```
 
-![](big-finale_files/figure-gfm/pressure-1.png)<!-- -->
+## Step 6: Popularity
 
-Note that the `echo = FALSE` parameter was added to the code chunk to
-prevent printing of the R code that generated the plot.
+Now, we want to see how popular each of these songs are. There is a
+variable labelled: popularity, which ranges from 0 to 100 with 100 being
+the highest / most popular. Popularity is not static rather it is
+dynamic, so it is liable to change over time. Anyways, at the time of
+this writing: May 9, 2021 the results are:
+
+Tarzan (1999): 1 The Little Mermaid (1997): 65 Hercules (1997): 67 The
+Lion King (1994): 76
