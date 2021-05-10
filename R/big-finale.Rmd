@@ -5,8 +5,9 @@ output: github_document
 
 ```{r setup, include=FALSE}
 library(spotifyr)
-library(ggplot2)
+library(tidyverse)
 library(flextable)
+
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -26,7 +27,7 @@ We'll pick the four albums we want to examine (using Disney Hits we all know and
 
 ## Step 3: Alright, now you're familiar what's next? 
 
-This part requires a little more googling (a key part of everyone's process: from data scientists to top level execs) to understand what's exactly going on here. Once you have a Spotify developer account, feel free to start poking around about what each component means: how the data is stored, how to access it, etc.  
+This part requires a little more googling (a key part of everyone's process: from data scientists to top level execs) to understand what's exactly going on here. Once you have a Spotify developer account, feel free to start poking around about what each component means: how the data is stored, how to access it, etc. Spotify has some great, very detailed guides on every aspect of what is in store.   
 
 ## Step 4: Lets Get the Album ID
 

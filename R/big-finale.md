@@ -36,7 +36,8 @@ This part requires a little more googling (a key part of everyone’s
 process: from data scientists to top level execs) to understand what’s
 exactly going on here. Once you have a Spotify developer account, feel
 free to start poking around about what each component means: how the
-data is stored, how to access it, etc.
+data is stored, how to access it, etc. Spotify has some great, very
+detailed guides on every aspect of what is in store.
 
 ## Step 4: Lets Get the Album ID
 
@@ -75,7 +76,26 @@ Now, we want to see how popular each of these songs are. There is a
 variable labelled: popularity, which ranges from 0 to 100 with 100 being
 the highest / most popular. Popularity is not static rather it is
 dynamic, so it is liable to change over time. Anyways, at the time of
-this writing: May 9, 2021 the results are:
+this writing: May 9, 2021 the results are (drummmmrollll pleaseee):
 
-Tarzan (1999): 1 The Little Mermaid (1997): 65 Hercules (1997): 67 The
-Lion King (1994): 76
+``` r
+big_finale <- dplyr::tribble(
+  ~album_name, ~popularity,
+  "Tarzan (1999)", 1,
+  "The Little Mermaid (1997)", 65,
+  "Hercules (1997)", 67,
+  "The Lion King (1994)", 76
+)
+
+big_finale <- big_finale %>% 
+  dplyr::arrange(
+    -popularity
+  ) 
+
+flextable::flextable(big_finale) %>% 
+  set_header_labels(album_name = "Album Name", 
+                    popularity = "Popularity") %>% 
+  flextable::theme_zebra()
+```
+
+    ## PhantomJS not found. You can install it with webshot::install_phantomjs(). If it is installed, please make sure the phantomjs executable can be found via the PATH variable.
