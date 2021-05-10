@@ -1,6 +1,8 @@
 ---
 title: "90's Disney Hits"
-output: github_document
+author: "Ryan Batten"
+date: "09/05/2021"
+output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
@@ -27,13 +29,14 @@ We'll pick the four albums we want to examine (using Disney Hits we all know and
 
 ## Step 3: Alright, now you're familiar what's next? 
 
-This part requires a little more googling (a key part of everyone's process: from data scientists to top level execs) to understand what's exactly going on here. Once you have a Spotify developer account, feel free to start poking around about what each component means: how the data is stored, how to access it, etc. Spotify has some great, very detailed guides on every aspect of what is in store.   
+This part requires a little more googling (a key part of everyone's process: from data scientists to top level execs) to understand what is exactly going on here. Once you have a Spotify developer account, feel free to start poking around about what each component means: how the data is stored, how to access it, etc. Spotify has some great, very detailed guides on every aspect of what is in store.   
 
 ## Step 4: Lets Get the Album ID
 
-If you have the Spotify app already downloaded onto your desktop (like I do), click on the album you'd like to use to pull the data from. See image below:
+If you have the Spotify app already downloaded onto your desktop (like I do), click on the album you'd like to use to pull the data from. You will see three dots (...): click share then "Copy Album Link". This will give you the unique Spotify album ID. Again, using the 
 
-![The Lion King](images/the-lion-king.png)
+
+, it will look something like this: https://open.spotify.com/album/3YA5DdB3wSz4pdfEXoMyRd?si=CpCUiyLBT2ea5y7haYA9Cg
 
 ## Step 5: Data Collection
 
@@ -54,7 +57,6 @@ Here is a list of the other three albums:
 tarzan <- spotifyr::get_album(id = '6fBzYwBKjuO4hmhcGuklJM?si=8G4ZAzUVRcm0FRF8aXphuw') # Tarzan (1994)
 little_mermaid <- spotifyr::get_album(id = "4YTduhQWfS0pOzQC4o0HcG?si=LBpETiG2RSyZyIk8mloBQg" ) # The Little Mermaid (1997)
 hercules <- spotifyr::get_album(id = "1wbY6VUchNsZLaDi22eD3J?si=00ajCSlHReuJXSz8XpARZg") # Hercules (1997)
-
 
 ```
 
