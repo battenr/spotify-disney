@@ -1,8 +1,11 @@
 ---
 title: "90's Disney Hits"
 author: "Ryan Batten"
-date: "10/05/2021"
-output: pdf_document
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  word_document: default
+  html_document:
+    df_print: paged
 ---
 
 ```{r setup, include=FALSE}
@@ -58,11 +61,23 @@ hercules <- spotifyr::get_album(id = "1wbY6VUchNsZLaDi22eD3J?si=00ajCSlHReuJXSz8
 
 ```
 
-## Step 6: Popularity
+## Step 6: Understand What's Going On
 
-Now, we want to see how popular each of these songs are. There is a variable labelled: popularity, which ranges from 0 to 100 with 100 being the highest / most popular. Popularity is not static rather it is dynamic, so it is liable to change over time. Anyways, at the time of this writing: May 9, 2021 the results are (drummmmrollll pleaseee):
+We're going to need to see what's going on in these nested lists. Below is an example, again using The Lion King (1994): 
 
-```{r}
+```{r, results = FALSE, warnings = FALSE}
+
+str(lion_king)
+
+```
+
+This will show list after list. Take your time to scroll through and see what kind of data is available!
+
+## Step 7: Popularity
+
+Now, we want to see how popular each of these songs are. There is a variable labeled popularity, which ranges from 0 to 100, with 100 being the highest / most popular. Popularity is not static rather it is dynamic, so it is liable to change over time. Anyways, at the time of this writing: May 9, 2021 the results are (drummmmrollll pleaseee):
+
+```{r, echo = FALSE}
 
 big_finale <- dplyr::tribble(
   ~album_name, ~popularity,
@@ -77,16 +92,11 @@ big_finale <- big_finale %>%
     -popularity # organizing table by popularity
   ) 
 
-big_finale_table <- flextable::flextable(big_finale) %>% 
+flextable::flextable(big_finale) %>% 
   set_header_labels(album_name = "Album Name", 
                     popularity = "Popularity") %>% 
-  flextable::theme_zebra()
+  flextable::theme_zebra() %>% 
+  flextable::width(width = 1) 
 
 ```
 
-```{r}
-
-big_finale_table
-
-
-```
