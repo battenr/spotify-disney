@@ -1,0 +1,299 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={90's Disney Hits},
+  pdfauthor={Ryan Batten},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{colortbl}
+\usepackage{hhline}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{hyperref}
+
+\title{90's Disney Hits}
+\author{Ryan Batten}
+\date{10/05/2021}
+
+\begin{document}
+\maketitle
+
+\hypertarget{disney-hits-spotify-all-together}{%
+\section{Disney Hits + Spotify: All
+Together}\label{disney-hits-spotify-all-together}}
+
+The aim of this project started as a NCAA March Madness style tournament
+bracket. What began as a simple selection process, turned into a more
+data-driven goal of ``this is good but how do we look at this with a
+scientist's eye?''. Data are everywhere, but sometimes it requires a bit
+more of ``playing around'' to understand what is really going on here.
+
+\hypertarget{step-1-getting-setup-with-spotify}{%
+\subsection{Step 1: Getting Setup with
+Spotify}\label{step-1-getting-setup-with-spotify}}
+
+If you have no clue how to do this, don't worry! I didn't either until I
+started playing around with it. First step is to head over to the
+amazing Thompson et al.~(2021) \emph{spotifyr} package to get setup with
+a Spotify developer account.
+
+\hypertarget{step-2-getting-familiar-with-the-data}{%
+\subsection{Step 2: Getting Familiar with the
+Data}\label{step-2-getting-familiar-with-the-data}}
+
+So now you're in, what next? When you start exploring with the data it
+can seem overwhelming. Lists on lists on lists\ldots.but not to fear
+young Jedi! Where there is a will there is a way. This is the
+exploratory data analysis phase, more of an art-form than a science
+however can't recommend enough to check out ``R for Data Science'' by
+Grolemund \& Wickham (2016). Like many before me, this is a great place
+to start as a beginner.
+
+We'll pick the four albums we want to examine (using Disney Hits we all
+know and love!): The Lion King, Hercules, Tarzan and The Little Mermaid.
+
+\hypertarget{step-3-alright-now-youre-familiar-whats-next}{%
+\subsection{Step 3: Alright, now you're familiar what's
+next?}\label{step-3-alright-now-youre-familiar-whats-next}}
+
+This part requires a little more googling (a key part of everyone's
+process: from data scientists to top level execs) to understand what is
+exactly going on here. Once you have a Spotify developer account, feel
+free to start poking around about what each component means: how the
+data is stored, how to access it, etc. Spotify has some great, very
+detailed guides on every aspect of what is in store.
+
+\hypertarget{step-4-lets-get-the-album-id}{%
+\subsection{Step 4: Lets Get the Album
+ID}\label{step-4-lets-get-the-album-id}}
+
+If you have the Spotify app already downloaded onto your desktop (like I
+do), click on the album you'd like to use to pull the data from. You
+will see three dots (\ldots): click share then ``Copy Album Link''. This
+will give you the unique Spotify album ID. Again, using The Lion King
+(1994) we end up with:
+``\url{https://open.spotify.com/album/3YA5DdB3wSz4pdfEXoMyRd?si=CpCUiyLBT2ea5y7haYA9Cg}''.
+The last string, that bizzare set of alphanumeric characters, after the
+``album/'' are what is referred to as the Spotify album id.
+
+\hypertarget{step-5-data-collection}{%
+\subsection{Step 5: Data Collection}\label{step-5-data-collection}}
+
+Time to get into it young grasshopper! We're going to use the
+\emph{spotifyr::get\_album()} function to extract what we need here. It
+will pull a \textbf{BUNCH} of meta-data but fear not. If we keep this
+simple, we'll be just fine. Below is an example using The Lion King
+(1994)
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{lion_king <-}\StringTok{ }\NormalTok{spotifyr}\OperatorTok{::}\KeywordTok{get_album}\NormalTok{(}\DataTypeTok{id =} \StringTok{"3YA5DdB3wSz4pdfEXoMyRd?si=9UUAysDuTS6ixCsXYMykWg"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+As you can see, each album is associated with a unique identifier
+(typically a string that consists of a bunch of nonsensical letters!).
+If they didn't make sense to you, don't worry they don't to me either!
+
+Here is a list of the other three albums:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{tarzan <-}\StringTok{ }\NormalTok{spotifyr}\OperatorTok{::}\KeywordTok{get_album}\NormalTok{(}\DataTypeTok{id =} \StringTok{'6fBzYwBKjuO4hmhcGuklJM?si=8G4ZAzUVRcm0FRF8aXphuw'}\NormalTok{) }\CommentTok{# Tarzan (1994)}
+\NormalTok{little_mermaid <-}\StringTok{ }\NormalTok{spotifyr}\OperatorTok{::}\KeywordTok{get_album}\NormalTok{(}\DataTypeTok{id =} \StringTok{"4YTduhQWfS0pOzQC4o0HcG?si=LBpETiG2RSyZyIk8mloBQg"}\NormalTok{ ) }\CommentTok{# The Little Mermaid (1997)}
+\NormalTok{hercules <-}\StringTok{ }\NormalTok{spotifyr}\OperatorTok{::}\KeywordTok{get_album}\NormalTok{(}\DataTypeTok{id =} \StringTok{"1wbY6VUchNsZLaDi22eD3J?si=00ajCSlHReuJXSz8XpARZg"}\NormalTok{) }\CommentTok{# Hercules (1997)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{step-6-popularity}{%
+\subsection{Step 6: Popularity}\label{step-6-popularity}}
+
+Now, we want to see how popular each of these songs are. There is a
+variable labelled: popularity, which ranges from 0 to 100 with 100 being
+the highest / most popular. Popularity is not static rather it is
+dynamic, so it is liable to change over time. Anyways, at the time of
+this writing: May 9, 2021 the results are (drummmmrollll pleaseee):
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{big_finale <-}\StringTok{ }\NormalTok{dplyr}\OperatorTok{::}\KeywordTok{tribble}\NormalTok{(}
+  \OperatorTok{~}\NormalTok{album_name, }\OperatorTok{~}\NormalTok{popularity,}
+  \StringTok{"Tarzan (1999)"}\NormalTok{, }\DecValTok{1}\NormalTok{,}
+  \StringTok{"The Little Mermaid (1997)"}\NormalTok{, }\DecValTok{65}\NormalTok{,}
+  \StringTok{"Hercules (1997)"}\NormalTok{, }\DecValTok{67}\NormalTok{,}
+  \StringTok{"The Lion King (1994)"}\NormalTok{, }\DecValTok{76}
+\NormalTok{)}
+
+\NormalTok{big_finale <-}\StringTok{ }\NormalTok{big_finale }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\NormalTok{dplyr}\OperatorTok{::}\KeywordTok{arrange}\NormalTok{(}
+    \OperatorTok{-}\NormalTok{popularity }\CommentTok{# organizing table by popularity}
+\NormalTok{  ) }
+
+\NormalTok{big_finale_table <-}\StringTok{ }\NormalTok{flextable}\OperatorTok{::}\KeywordTok{flextable}\NormalTok{(big_finale) }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\KeywordTok{set_header_labels}\NormalTok{(}\DataTypeTok{album_name =} \StringTok{"Album Name"}\NormalTok{, }
+                    \DataTypeTok{popularity =} \StringTok{"Popularity"}\NormalTok{) }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\NormalTok{flextable}\OperatorTok{::}\KeywordTok{theme_zebra}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{big_finale_table}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: Warning: fonts used in `flextable` are ignored because the `pdflatex`
+## engine is used and not `xelatex` or `lualatex`. You can avoid this warning
+## by using the `set_flextable_defaults(fonts_ignore=TRUE)` command or use a
+## compatible engine by defining `latex_engine: xelatex` in the YAML header of the
+## R Markdown document.
+\end{verbatim}
+
+\providecommand{\docline}[3]{\noalign{\global\setlength{\arrayrulewidth}{#1}}\arrayrulecolor[HTML]{#2}\cline{#3}}
+
+\setlength{\tabcolsep}{2pt}
+
+\renewcommand*{\arraystretch}{1.5}
+
+\begin{longtable}[c]{|p{0.75in}|p{0.75in}}
+
+
+
+\hhline{~~}
+
+\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\cellcolor[HTML]{CFCFCF}\raggedright}p{\dimexpr 0.75in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{\textbf{Album Name}}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\cellcolor[HTML]{CFCFCF}\raggedleft}p{\dimexpr 0.75in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{\textbf{Popularity}}}} \\
+
+
+
+\endfirsthead
+
+\hhline{~~}
+
+\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\cellcolor[HTML]{CFCFCF}\raggedright}p{\dimexpr 0.75in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{\textbf{Album Name}}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\cellcolor[HTML]{CFCFCF}\raggedleft}p{\dimexpr 0.75in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{\textbf{Popularity}}}} \\
+
+\endhead
+
+
+
+\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\cellcolor[HTML]{EFEFEF}\raggedright}p{\dimexpr 0.75in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{The Lion King (1994)}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\cellcolor[HTML]{EFEFEF}\raggedleft}p{\dimexpr 0.75in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{76}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 0.75in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Hercules (1997)}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 0.75in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{67}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\cellcolor[HTML]{EFEFEF}\raggedright}p{\dimexpr 0.75in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{The Little Mermaid (1997)}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\cellcolor[HTML]{EFEFEF}\raggedleft}p{\dimexpr 0.75in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{65}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedright}p{\dimexpr 0.75in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{Tarzan (1999)}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\raggedleft}p{\dimexpr 0.75in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{11}{11}\selectfont{\textcolor[HTML]{000000}{1}}} \\
+
+
+
+\end{longtable}
+
+\end{document}
