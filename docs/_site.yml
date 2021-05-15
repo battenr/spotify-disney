@@ -1,0 +1,12 @@
+name: "big-finale"
+output_dir: "docs"
+navbar:
+  title: "90's Disney Hits"
+  left:
+  - text: "Home"
+  href: index.html
+  - text: "Big Finale"
+  - href: big-finale.html
+output:
+  html_document:
+  theme: cosmo
