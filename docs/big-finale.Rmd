@@ -1,6 +1,8 @@
 ---
 title: "90's Disney Hits"
-output: github_document
+author: "Ryan Batten"
+date: "May 9, 2021"
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
