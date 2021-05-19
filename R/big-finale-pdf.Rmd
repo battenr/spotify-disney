@@ -8,7 +8,6 @@ output:
     df_print: paged
 ---
 
-
 ```{r setup, include=FALSE}
 library(spotifyr)
 library(tidyverse)

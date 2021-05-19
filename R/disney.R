@@ -1,4 +1,5 @@
 # Setup ----
+library(usethis)
 
 library(spotifyr)
 
